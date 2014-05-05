@@ -1,0 +1,17 @@
+{
+  "name": "frontend-automation",
+  "version": "0.0.1",
+  "authors": [
+    "Oleh Burkhay <oburkhay@portalinmobiliario.com>"
+  ],
+  "description": "Presentation that demonstrate front-end automation",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://portalinmobiliario.github.io/frontend-automation",
+  "private": true,
+  "ignore": [
+  ],
+  "dependencies": {
+    "shower": "^1.0.5"
+  }
+}

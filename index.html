@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Front-end automation — tools & process</title>
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="components/shower-ribbon/styles/screen.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        var isMobile = false;
+
+        if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+                ) {
+            var body = document.getElementsByTagName('html');
+            body[0].classList.add('mobile');
+
+            isMobile = true;
+        }
+    </script>
+</head>
+<body class="list">
+
+<header class="caption">
+    <h1>Front-end automation — tools & process</h1>
+    <p><a href="mailto:oburkhay@portalinmobiliario.com">Oleh Burkhay</a>, <a href="http://portalinmobiliario.com/">Portalinmobiliario.com</a></p>
+
+</header>
+
+<section class="slide shout brand-bg" id="Cover"><div>
+    <h2 class="bold light">Front-end automation<br> <span>tools & process</span></h2>
+
+    <div class="place b">
+        <img class="ok" src="//dah6q9sgmyn3o.cloudfront.net/content/images/cl-portal/logos/portal-lg-dt.png" alt="Portalinmobiliario">
+    </div>
+</div></section>
+
+<section class="slide shout" id="hail-node"><div>
+    <img style="margin-left: 1em" src="images/nodejs.svg" alt="NodeJS">
+</div></section>
+
+<section class="slide"><div>
+    <h2>Native tool</h2>
+
+    <ul>
+        <li>Low barrier to entry</li>
+        <li>Incredible popularity of JavaScript</li>
+        <li class="next"><strong style="font-size: 1.5em">Huge community</strong></li>
+    </ul>
+</div></section>
+
+<section class="slide shout"><div>
+    <img class="place m" width="700" src="images/github-new-repos.png" alt=".js github report"/>
+
+    <p class="note place b"><a class="lp" href="http://redmonk.com/dberkholz/2014/05/02/github-language-trends-and-the-fragmenting-landscape/">source</a></p>
+</div></section>
+
+<section class="slide shout"><div>
+    <img class="place m" style="margin-top: -50px" width="700" src="images/js-game.png" alt=".js github report"/>
+
+    <p class="note place b"><a class="lp" href="https://twitter.com/ThirdManLabs/status/431853704862367744">source</a></p>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Automate everything!</h2>
+
+    <ol>
+        <li>Performance</li>
+        <li class="next">Code linting</li>
+        <li class="next">Pre/post-processing</li>
+        <li class="next">Testing</li>
+        <li class="next"><strong>Development</strong></li>
+    </ol>
+</div></section>
+
+<section class="slide clean" id="grunt"><div>
+    <h2>Grunt JS</h2>
+
+    <img width="300" src="images/grunt.svg" alt="grunt"/>
+
+    <p class="next">And its 2500+ plug-ins</p>
+</div></section>
+
+<section class="slide"><div>
+    <h2>What is Grunt?</h2>
+
+    <ul>
+        <li>JavaScript task runner</li>
+        <li class="next">Runs on Node.js</li>
+        <li class="next">Helps <strong>automate</strong> tasks
+        <ul>
+            <li>Code linting, minification, concatenation</li>
+            <li>Image optimization & minification</li>
+            <li>CSS pre/post-processing</li>
+            <li>CSS Sprites</li>
+            <li>Etc, etc.</li>
+        </ul>
+        </li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Grunt is not only</h2>
+
+    <strong>Task Runners</strong>
+
+    <ul>
+        <li><a href="http://gruntjs.com/">Grunt</a> - oldest, robust</li>
+        <li><a href="http://gulpjs.com/">Gulp</a> - async, growing fast</li>
+        <li><a href="http://brunch.io/">Brunch</a></li>
+        <li><a href="https://github.com/broccolijs/broccoli">Broccoli</a> - can run in the browser</li>
+        <li class="next">Grunt + <a href="http://www.pintjs.com/">Pint</a></li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <div class="place m" style="font-size: 2em; width: 784px;">
+        <div style="margin-bottom: 2em; line-height: 1.5">
+            <strong>Everything is already done for you</strong>
+            <div style="font-size: 0.7em;">just use it</div>
+        </div>
+    </div>
+</div></section>
+
+
+
+<!-- Performance -->
+
+
+
+<section class="slide shout" id="perf"><div>
+    <!--TODO: some picture?-->
+
+    <h2>Performance</h2>
+</div></section>
+
+<section class="slide clean"><div>
+
+    <img class="place m" width="700" src="images/badsite.png" alt="пустая страница">
+
+</div></section>
+
+<section class="slide"><div>
+    <h2>At first</h2>
+
+    <ol>
+        <li>Compress everything - CSS, HTML, JS</li>
+        <li class="next">Make sprites - <a href="http://csssprites.org/">Smart Sprites</a><span class="next">, <a href="https://github.com/Ensighten/grunt-spritesmith">Spritesmith</a></span><span class="next">, <a href="https://github.com/FWeinb/grunt-svgstore">SVG</a></span></li>
+        <li class="next">Iconic fonts creation - <a href="https://github.com/sapegin/grunt-webfont">webfont</a></li>
+    </ol>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Graphics</h2>
+
+    <ul>
+        <li><a href="https://github.com/gruntjs/grunt-contrib-imagemin">Imagemin</a><span class="next">, only for <a href="https://github.com/tschaub/grunt-newer">changed files</a></span></li>
+        <li><a href="https://github.com/svg/svgo">SVGO</a></li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>CSS</h2>
+
+    <ul>
+        <li>Smart compressors, such as <a href="https://github.com/css/csso">CSSO</a></li>
+        <li class="next"><a href="https://github.com/buildingblocks/grunt-combine-media-queries">Combine Media Queries</a></li>
+        <li class="next">Clean unused <a href="https://github.com/addyosmani/grunt-uncss">CSS</a> <span class="next">and <a href="https://developers.google.com/closure/compiler/">JS</a></span></li>
+        <li class="next">+ <a href="http://zmoazeni.github.io/csscss/">CSSCSS</a> to check duplicated declarations</li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>How to measure?</h2>
+
+    In addition to statistics from users:
+
+    <ul>
+        <li><a href="https://github.com/jrcryer/grunt-pagespeed">Google PageSpeed + Grunt</a></li>
+        <li class="next"><a href="https://github.com/gmetais/grunt-devperf">Tests with PhatnomJS</a> or <a href="https://github.com/axemclion/browser-perf">Selenium</a></li>
+        <li class="next"><a href="http://www.sitespeed.io/">monitor a performance and compare</a> it with best practices and metrics</li>
+        <li class="next"><a href="https://github.com/roman01la/grunt-load-perf">Screenshots</a> on slow connections</li>
+    </ul>
+</div></section>
+
+<section class="slide clean"><div>
+
+    <img class="place m" width="700" src="images/pagespeed.png" alt="Grunt Google PageSpeed">
+
+</div></section>
+
+<section class="slide clean"><div>
+
+    <img class="place m" width="711" src="images/devperf.png" alt="Grunt dev-perf">
+
+</div></section>
+
+
+<!-- Code linting -->
+
+
+
+<section class="slide shout" id="lint"><div>
+    <!-- TODO: a picture? -->
+
+    <h2>Code linting</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Analyze all</h2>
+
+    <ul>
+        <li>JS <a href="https://github.com/stephenmathieson/grunt-jslint">Lint</a>, <a href="https://github.com/gruntjs/grunt-contrib-jshint">Hint</a> <span class="next"> and <a href="https://github.com/jonschlinkert/grunt-fixmyjs">fix it</a> immediately</span></li>
+        <li><a href="https://github.com/gruntjs/grunt-contrib-csslint">CSS Lint</a></li>
+        <li><a href="https://github.com/philipwalton/html-inspector">HTML inspector</a></li>
+        <li class="next">Standards validators, Coffee, Less, SCSS, JSON, jQuery, ...</li>
+    </ul>
+
+</div></section>
+
+<section class="slide"><div>
+    <h2>That's not all</h2>
+
+    Availability checking:
+    <ul>
+        <li><a href="https://github.com/globant-ui/arialinter">Aria linter</a></li>
+        <li><a href="https://github.com/yargalot/grunt-accessibility">WCAG standards</a></li>
+    </ul>
+
+</div></section>
+
+
+<!-- *-processing -->
+
+
+
+<section class="slide shout" id="processing"><div>
+    <!-- TODO: a picture? -->
+
+    <h2>*-processing</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>What we have</h2>
+
+    <ul>
+        <li>LESS, SASS, Stylus</li>
+        <li>Swig, Jade, EJS</li>
+        <li>Coffee, Typescript</li>
+        <li class="next"><a href="https://github.com/paulmillr/es6-shim">ES6 Shim</a></li>
+        <li class="next"><strong style="font-size: 1.5em">Rework!</strong></li>
+    </ul>
+
+</div></section>
+
+
+<style>
+    .process {
+        margin-top: 30px;
+        margin-left: -7%;
+    }
+
+    .process_i {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 26%;
+        margin-left: 7%;
+        border: solid 4px #EB7218;
+        text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 50px 10px 0;
+        min-height: 130px;
+        border-radius: 10px;
+        line-height: 1.2;
+    }
+
+    .process_i.__arrw:after {
+        content: "➧";
+        position: absolute;
+        top: 50%;
+        color: #eb722e;
+        left: 100%;
+        font-size: 75px;
+        margin-left: 15px;
+        line-height: 0;
+        border-radius: 13px;
+    }
+
+</style>
+
+<section class="slide"><div>
+    <h2>Rework</h2>
+
+    <div class="process" style="margin-top: 4em;">
+        <div class="process_i __arrw">CSS parser</div><div
+            class="process_i __arrw next"><strong>Processor</strong></div><div
+            class="process_i next">Compiler</div>
+    </div>
+</div></section>
+
+<section class="slide"><div>
+    <h2>CSS</h2>
+
+    <strong>Rework</strong>
+
+    <ul>
+        <li class="next"><a href="https://github.com/ai/autoprefixer">Autoprefixer</a></li>
+        <li class="next"><a href="http://www.myth.io/">Myth</a> — CSS-polyfill</li>
+        <li class="next"><strong>The future is for postprocessing</strong></li>
+    </ul>
+
+</div></section>
+
+<section class="slide"><div>
+    <h2>HTML & JS</h2>
+
+    <strong>Building blocks & web components</strong>
+
+    <ul>
+        <li class="next"><a href="http://bem.info/">BEM</a></li>
+        <li class="next"><a href="http://www.polymer-project.org/">Polymer</a></li>
+    </ul>
+
+</div></section>
+
+
+
+<!-- Testing -->
+
+
+
+<section class="slide shout" id="testing"><div>
+    <!-- TODO: a picture? -->
+
+    <h2>Testing</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Testing</h2>
+
+    <ul>
+        <li>Unit testing</li>
+        <li class="next">Performance testing</li>
+        <li class="next"><strong>Functional testing</strong></li>
+    </ul>
+
+</div></section>
+
+<section class="slide"><div>
+    <h2>Functional testing</h2>
+
+    <ul>
+        <li>Selenium</li>
+        <li class="next"><a href="http://casperjs.org/">CasperJS</a></li>
+        <li class="next"><strong><a href="http://dalekjs.com/">Dalek.js</a></strong></li>
+    </ul>
+
+</div></section>
+
+
+<section class="slide clean" style="text-align: center"><div>
+    <h2>Monkey testing</h2>
+
+    <img width="500" src="images/gremlins.gif" alt="Monkey testing">
+
+    <p class="note place b"><a href="https://github.com/marmelab/gremlins.js">gremlins.js</a></p>
+
+</div></section>
+
+
+<!-- Development -->
+
+
+<section class="slide shout" id="dev"><div>
+    <!-- TODO: a picture? -->
+
+    <h2>Development</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Quick start</h2>
+
+    <strong><a href="http://harpjs.com">Harp</a></strong>
+
+    <ul>
+        <li>Server</li>
+        <li>Preprocessing of all</li>
+        <li>Build</li>
+        <li>Deploy</li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Harp project example</h2>
+
+    <img width="100%" src="images/harp.png" alt="Harp example"/>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Harp</h2>
+
+    <ul>
+        <li><a href="http://harpjs.com/docs/environment/lib">Harp express middleware</a></li>
+        <li class="next"><a href="http://harp.io">harp.io</a> - hosting with deploy from Dropbox</li>
+        <li class="next">Forward to the web with <a href="https://meetfinch.com/">Finch</a> <span class="lp">(or <a href="https://ngrok.com/">ngrok</a>)</span></li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+
+    <img width="100%" src="images/finch-forward.png" alt="Finch forward"/>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Scaffolding</h2>
+
+    <strong><a href="http://yeoman.io/">Yeoman</a></strong>
+
+    <ul>
+        <li>Based on Yo, Grunt, Bower</li>
+        <li class="next">600+ <a href="http://yeoman.io/community-generators.html">generators</a></li>
+        <li class="next">How to <a href="http://code.tutsplus.com/tutorials/build-your-own-yeoman-generator--cms-20040">write your own generator</a></li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Dependencies</h2>
+
+    <a href="http://bower.io/">Bower</a> – <a href="https://www.npmjs.org/">NPM</a> for client side JS
+
+    <pre style="margin-top: 1.5em">
+        <code class="next">bower <mark>init</mark></code>
+        <code class="next">bower <mark>install jquery</mark></code>
+        <code class="next">bower <mark>install https://github.com/foo/bar.git</mark></code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+    <h2>bower.json</h2>
+
+    <pre style="margin-top: 1.5em">
+        <code>"dependencies": { </code>
+        <code>  <mark>"jquery"</mark>: "~2.1.0",</code>
+        <code>  <mark>"font-awesome"</mark>: "~3.1.1"</code>
+        <code>}</code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Environment setup</h2>
+
+    <ul>
+        <li>Automatic install of NodeJS & dependencies with NPM</li>
+        <li class="next"><a href="http://www.vagrantup.com/">Vagrant</a></li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Vagrant</h2>
+
+    <pre>
+        <code>vagrant <mark>init your-environment</mark></code>
+        <code>vagrant <mark>up</mark></code>
+        <code class="next">vagrant <mark>ssh</mark></code>
+    </pre>
+</div></section>
+
+<section class="slide shout" id="suffer2"><div>
+    <h2>Automate everything!</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Front-end automation</h2>
+    <div class="fz-l">Oleh Burkhay, Portalinmobiliario</div>
+    <ul class="fz-l">
+        <li><a href="mailto:oburkhay@portalinmobiliario.com">oburkhay@portalinmobiliario.com</a></li>
+        <li><a href="http://twitter.com/atmaworks">@atmaworks</a></li>
+    </ul>
+</div></section>
+
+<div class="progress"><div></div></div>
+
+<script src="components/shower-core/shower.min.js"></script>
+
+<!-- Powered by Shower presentation engine - Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
